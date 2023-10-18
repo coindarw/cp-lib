@@ -1,0 +1,462 @@
+{
+	"10digits": {
+		"prefix": "digset",
+		"body": "cout << fixed << setprecision(20);",
+		"description": "sc:小数の表示桁数を設定"
+	},
+	"chmin": {
+		"prefix": "chmin",
+		"body": "$1 = min($1, $2);",
+		"description": "sc:"
+	},
+	"chmax": {
+		"prefix": "chmax",
+		"body": "$1 = max($1, $2);",
+		"description": "sc:"
+	},
+	"scanf1": {
+		"prefix": "sf1",
+		"body": "scanf(\"%$1\", &$2);",
+		"description": "sc:"
+	},
+	"printf1": {
+		"prefix": "pf1",
+		"body": "printf(\"%$1\\n\", $2);",
+		"description": "sc:"
+	},
+	"scanf2": {
+		"prefix": "sf2",
+		"body": "scanf(\"%$1%$1\", &$2, &$3);",
+		"description": "sc:"
+	},
+	"printf2": {
+		"prefix": "pf2",
+		"body": "printf(\"%$1 %$1\\n\", $2, $3);",
+		"description": "sc:"
+	},
+	"scanf3": {
+		"prefix": "sf3",
+		"body": "scanf(\"%$1%$1%$1\", &$2, &$3, &$4);",
+		"description": "sc:"
+	},
+	"printf3": {
+		"prefix": "pf3",
+		"body": "printf(\"%$1 %$1 %$1\\n\", $2, $3, $4);",
+		"description": "sc:"
+	},
+	"scanf4": {
+		"prefix": "sf4",
+		"body": "scanf(\"%$1%$1%$1%$1\", &$2, &$3, &$4, &$5);",
+		"description": "sc:"
+	},
+	"printf4": {
+		"prefix": "pf4",
+		"body": "printf(\"%$1 %$1 %$1 %$1\\n\", $2, $3, $4, $5);",
+		"description": "sc:"
+	},
+	"dxdy5": {
+		"prefix": "dxdy5",
+		"body": "const int dx[] = {-1, 0, 0, 0, 1};\r\nconst int dy[] = {0, -1, 0, 1, 0};",
+		"description": "const:近傍5マス"
+	},
+	"dxdy8": {
+		"prefix": "dxdy8",
+		"body": "const int dx[] = {-1, -1, -1, 0, 0, 1, 1, 1};\r\nconst int dy[] = {-1, 0, 1, -1, 1, -1, 0, 1};",
+		"description": "const:近傍8マス"
+	},
+	"dxdy9": {
+		"prefix": "dxdy9",
+		"body": "const int dx[] = {-1, -1, -1, 0, 0, 0, 1, 1, 1};\r\nconst int dy[] = {-1, 0, 1, -1, 0, 1, -1, 0, 1};",
+		"description": "const:近傍9マス"
+	},
+	"dxdy4": {
+		"prefix": "dxdy4",
+		"body": "const int dx[] = {1, 0, -1, 0};\nconst int dy[] = {0, 1, 0, -1};",
+		"description": "const:近傍4マス,反時計回り"
+	},
+	"Isprime": {
+		"prefix": "Isprime",
+		"body": "bool isPrime(int x) {\r\n    if (x <= 1) return false;\r\n    int sqx = sqrt(x);\r\n    for (int i = 2; i <= sqx; i++) {\r\n        if (x % i == 0) {\r\n            return false;\r\n        }\r\n    }\r\n    return true;\r\n}",
+		"description": "ad:math:試し割り"
+	},
+	"prime_factorize": {
+		"prefix": "prime_factorize",
+		"body": "vector<int> prime_factorize(int n) {\n    if (n <= 1) return {};\n    vector<int> ans;\n    for (int i = 2; i * i <= n; i++) {\n        while (n % i == 0) {\n            ans.push_back(i);\n            n /= i;\n        }\n    }\n    if (n != 1) {\n        ans.push_back(n);\n    }\n    return ans;\n}",
+		"description": "ad:math:"
+	},
+	"degrad": {
+		"prefix": "degrad",
+		"body": "double d2r(double deg) { return deg / 360 * 2 * M_PI; }\r\ndouble r2d(double rad) { return rad / 2 / M_PI * 360; }",
+		"description": "func:deg,rad変換"
+	},
+	"sedge": {
+		"prefix": "sedge",
+		"body": "struct edge {\r\n    int to, cost;\r\n    edge(int to, int cost) : to(to), cost(cost) {}\r\n};",
+		"description": "sc:"
+	},
+	"ssedge": {
+		"prefix": "ssedge",
+		"body": "struct edge {\r\n    int to;\r\n    edge(int to) : to(to) {}\r\n};",
+		"description": "sc:"
+	},
+	"graph": {
+		"prefix": "graph",
+		"body": "vector<vector<edge>> G$1;",
+		"description": "sc:"
+	},
+	"pll": {
+		"prefix": "pll",
+		"body": "using P = pair<ll, ll>;",
+		"description": "sc:"
+	},
+	"pint": {
+		"prefix": "pint",
+		"body": "using P = pair<int, int>;",
+		"description": "sc:"
+	},
+	"vecp": {
+		"prefix": "vecp",
+		"body": "vector<P> $1;",
+		"description": "sc:"
+	},
+	"vint": {
+		"prefix": "vint",
+		"body": "vector<int>",
+		"description": "sc:"
+	},
+	"vvint": {
+		"prefix": "vvint",
+		"body": "vector<vector<int>> $1 = vector<vector<int>>($2, vector<int>($3));",
+		"description": "sc:"
+	},
+	"vvvint": {
+		"prefix": "vvvint",
+		"body": "vector<vector<vector<int>>> $1 = vector<vector<vector<int>>>($2, vector<vector<int>>($3, vector<int>($4)));",
+		"description": "sc:"
+	},
+	"vmint": {
+		"prefix": "vmint",
+		"body": "vector<mint>",
+		"description": "sc:"
+	},
+	"vvmint": {
+		"prefix": "vvmint",
+		"body": "vector<vector<mint>> $1 = vector<vector<mint>>($2, vector<mint>($3));",
+		"description": "sc:"
+	},
+	"vvvmint": {
+		"prefix": "vvvmint",
+		"body": "vector<vector<vector<mint>>> $1 = vector<vector<vector<mint>>>($2, vector<vector<mint>>($3, vector<mint>($4)));",
+		"description": "sc:"
+	},
+	"vll": {
+		"prefix": "vll",
+		"body": "vector<ll>",
+		"description": "sc:"
+	},
+	"vvll": {
+		"prefix": "vvll",
+		"body": "vector<vector<ll>> $1 = vector<vector<ll>>($2, vector<ll>($3));",
+		"description": "sc:"
+	},
+	"vvvll": {
+		"prefix": "vvvll",
+		"body": "vector<vector<vector<ll>>> $1 = vector<vector<vector<ll>>>($2, vector<vector<ll>>($3, vector<ll>($4)));",
+		"description": "sc:"
+	},
+	"vbool": {
+		"prefix": "vbool",
+		"body": "vector<bool>",
+		"description": "sc:"
+	},
+	"vvbool": {
+		"prefix": "vvbool",
+		"body": "vector<vector<bool>> $1 = vector<vector<bool>>($2, vector<bool>($3));",
+		"description": "sc:"
+	},
+	"vvvbool": {
+		"prefix": "vvvbool",
+		"body": "vector<vector<vector<bool>>> $1 = vector<vector<vector<bool>>>($2, vector<vector<bool>>($3, vector<bool>($4)));",
+		"description": "sc:"
+	},
+	"ca": {
+		"prefix": "ca",
+		"body": "const auto ",
+		"description": "sc:"
+	},
+	"caref": {
+		"prefix": "caref",
+		"body": "const auto &",
+		"description": "sc:"
+	},
+	"debug0": {
+		"prefix": "db0",
+		"body": "cerr << endl;",
+		"description": "sc:"
+	},
+	"debug1": {
+		"prefix": "db1",
+		"body": "cerr << $1 << endl;",
+		"description": "sc:"
+	},
+	"debug2": {
+		"prefix": "db2",
+		"body": "cerr << $1 << \" \" << $2 << endl;",
+		"description": "sc:"
+	},
+	"debug3": {
+		"prefix": "db3",
+		"body": "cerr << $1 << \" \" << $2 << \" \" << $3 << endl;",
+		"description": "sc:"
+	},
+	"debug4": {
+		"prefix": "db4",
+		"body": "cerr << $1 << \" \" << $2 << \" \" << $3 << \" \" << $4 << endl;",
+		"description": "sc:"
+	},
+	"cout0": {
+		"prefix": "ct0",
+		"body": "cout << \"\\n\";",
+		"description": "sc:"
+	},
+	"cout1": {
+		"prefix": "ct1",
+		"body": "cout << $1 << \"\\n\";",
+		"description": "sc:"
+	},
+	"cout2": {
+		"prefix": "ct2",
+		"body": "cout << $1 << \" \" << $2 << \"\\n\";",
+		"description": "sc:"
+	},
+	"cout3": {
+		"prefix": "ct3",
+		"body": "cout << $1 << \" \" << $2 << \" \" << $3 << \"\\n\";",
+		"description": "sc:"
+	},
+	"cout4": {
+		"prefix": "ct4",
+		"body": "cout << $1 << \" \" << $2 << \" \" << $3 << \" \" << $4 << \"\\n\";",
+		"description": "sc:"
+	},
+	"cin1": {
+		"prefix": "cn1",
+		"body": "cin >> $1;",
+		"description": "sc:"
+	},
+	"cin2": {
+		"prefix": "cn2",
+		"body": "cin >> $1 >> $2;",
+		"description": "sc:"
+	},
+	"cin3": {
+		"prefix": "cn3",
+		"body": "cin >> $1 >> $2 >> $3;",
+		"description": "sc:"
+	},
+	"cin4": {
+		"prefix": "cn4",
+		"body": "cin >> $1 >> $2 >> $3 >> $4;",
+		"description": "sc:"
+	},
+	"cin5": {
+		"prefix": "cn5",
+		"body": "cin >> $1 >> $2 >> $3 >> $4 >> $5;",
+		"description": "sc:"
+	},
+	"pchmint": {
+		"prefix": "pchmint",
+		"body": "constexpr ll MOD = M9;\nusing mint = static_modint<MOD>;\nstruct modInv {\n    int n;\n    vector<mint> d;\n    modInv() : n(2), d({0, 1}) {}\n    mint operator()(int i) {\n        while (n <= i) d.emplace_back(-d[MOD % n] * (MOD / n)), ++n;\n        return d[i];\n    }\n    mint operator[](int i) const { return d[i]; }\n} invs;\nstruct Factorial {\n    int n;\n    vector<mint> d;\n    Factorial() : n(2), d({1, 1}) {}\n    mint operator()(int i) {\n        while (n <= i) d.emplace_back(d.back() * n), ++n;\n        return d[i];\n    }\n    mint operator[](int i) const { return d[i]; }\n} factorial;\nstruct FactorialInv {\n    int n;\n    vector<mint> d;\n    FactorialInv() : n(2), d({1, 1}) {}\n    mint operator()(int i) {\n        while (n <= i) d.emplace_back(d.back() * invs(n)), ++n;\n        return d[i];\n    }\n    mint operator[](int i) const { return d[i]; }\n} factorialInv;\nmint P(int n, int r) {\n    if (n < r || n < 0 || r < 0) return 0;\n    return factorial(n) * factorialInv(n - r);\n}\nmint C(int n, int r) {\n    if (n < r || n < 0 || r < 0) return 0;\n    return factorial(n) * factorialInv(r) * factorialInv(n - r);\n}\nmint H(int n, int r) {\n    const int _n = n + r - 1;\n    if (_n < r || _n < 0 || r < 0) return 0;\n    return factorial(_n) * factorialInv(r) * factorialInv(_n - r);\n}",
+		"description": "ad:math:線形時間逆元列挙、階乗、組み合わせのnPr,nCr,nHr"
+	},
+	"matpow": {
+		"prefix": "matpow",
+		"body": "typedef vector<vector<ll> > Matrix;\r\ntypedef vector<ll> vec;\r\n\r\nconst ll M = 1000'000'007;\r\n\r\nMatrix new_matrix(int n) {\r\n    Matrix res(n, vec(n));\r\n    return res;\r\n}\r\nMatrix new_matrix(int n, int m) {\r\n    Matrix res(n, vec(m));\r\n    return res;\r\n}\r\nMatrix operator*(const Matrix &m1, const Matrix &m2) {\r\n    assert(m1.at(0).size() == m2.size());\r\n    size_t n = m1.size();\r\n    size_t m = m2.at(0).size();\r\n    size_t l = m2.size();\r\n    Matrix res(n, vec(m));\r\n    rep(i, n) rep(j, m) rep(k, l) {\r\n        res.at(i).at(j) += m1.at(i).at(k) * m2.at(k).at(j);\r\n        res.at(i).at(j) %= M;\r\n    }\r\n    return res;\r\n}\r\nvec operator*(const Matrix &m, const vec &v) {\r\n    assert(m.at(0).size() == v.size());\r\n    vec res(v.size());\r\n    rep(i, v.size()) rep(j, m.at(0).size()) {\r\n        res.at(i) += m.at(i).at(j) * v.at(j);\r\n        res.at(i) %= M;\r\n    }\r\n    return res;\r\n}\r\nMatrix E(size_t n) {\r\n    Matrix res(n, vec(n));\r\n    rep(i, n) res.at(i).at(i) = 1;\r\n    return res;\r\n}\r\nMatrix pow(const Matrix &a, long long n) {\r\n    Matrix b = a;\r\n    Matrix res = E(a.size());\r\n    while (n > 0) {\r\n        if (n & 1)\r\n            res = res * b;\r\n        b = b * b;\r\n        n >>= 1ll;\r\n    }\r\n    return res;\r\n}",
+		"description": "ad:graph:行列累乗に使うやつ"
+	},
+	"bSearch": {
+		"prefix": "bSearch",
+		"body": "auto bsearch = [&](auto cmp) {\r\n    $1 ok = $2, ng = $3;\r\n    while (abs(ng - ok) > 1) {\r\n        $1 mid = (ng + ok) / 2;\r\n        if (cmp(mid))\r\n            ok = mid;\r\n        else\r\n            ng = mid;\r\n    }\r\n    return ok;\r\n};",
+		"description": "ad:others:"
+	},
+	"Union Find Trees": {
+		"prefix": "unionfind",
+		"body": "class DisjointSet {\r\n   private:\r\n    vector<int> rank, parent;\r\n\r\n   public:\r\n    DisjointSet() {}\r\n    DisjointSet(int size) {\r\n        rank.resize(size, 0);\r\n        parent.resize(size, 0);\r\n        rep(i, size) { makeSet(i); }\r\n    }\r\n    void makeSet(int x) {\r\n        parent[x] = -1;\r\n        rank[x] = 0;\r\n    }\r\n    bool same(int x, int y) { return findSet(x) == findSet(y); }\r\n    void unite(int x, int y) { link(findSet(x), findSet(y)); }\r\n    void link(int x, int y) {\r\n        if (x == y) {\r\n            return;\r\n        }\r\n        if (rank[x] > rank[y]) {\r\n            parent[x] += parent[y];\r\n            parent[y] = x;\r\n        } else {\r\n            parent[y] += parent[x];\r\n            parent[x] = y;\r\n            if (rank[x] == rank[y]) {\r\n                rank[y]++;\r\n            }\r\n        }\r\n    }\r\n    int findSet(int x) {\r\n        if (parent[x] >= 0) {\r\n            parent[x] = findSet(parent[x]);\r\n            return parent[x];\r\n        }\r\n        return x;\r\n    }\r\n    int size(int x) { return -parent[findSet(x)]; }\r\n};",
+		"description": "ad:others:unionfind"
+	},
+	"fenwicktree": {
+		"prefix": "fenwicktree",
+		"body": "template <typename T>\nstruct BIT {\n    int n;\n    vector<T> data;\n    BIT(int n) : n(n), data(n + 1, 0) {}\n    BIT() {}\n    void add(int i, T x = 1) {\n        for (i++; i <= n; i += (i & -i)) data[i] += x;\n    }\n    T sum(int i) {\n        T s(0);\n        for (i++; i; i -= (i & -i)) s += data[i];\n        return s;\n    }\n    T sum(int l, int r) { return sum(r - 1) - sum(l - 1); }\n    T get(int i) { return sum(i) - sum(i - 1); }\n\n    int lower_bound(T w) {\n        if (w <= 0) {\n            return 0;\n        }\n        int x = 0, r = 1;\n        while (r < n) r <<= 1;\n        for (int len = r; len > 0; len >>= 1) {\n            if (x + len <= n && data[x + len] < w) {\n                w -= data[x + len];\n                x += len;\n            }\n        }\n        return x;\n    }\n};",
+		"description": "ad:seg:0-indexed, [l, r)"
+	},
+	"cftenpure": {
+		"prefix": "cftenpure",
+		"body": "#include <bits/stdc++.h>\n\nusing ll = long long;\n#define rep(i, n) for (int i = 0, i##_len = (n); i < i##_len; ++i)\n#define reps(i, n) for (int i = 1, i##_len = (n); i <= i##_len; ++i)\n#define rrep(i, n) for (int i = ((int)(n)-1); i >= 0; --i)\n#define rreps(i, n) for (int i = ((int)(n)); i > 0; --i)\n#define rep2(i, s, n) for (int i = (s); i < (int)(n); i++)\n#define repc2(i, s, n) for (int i = (s); i <= (int)(n); i++)\n#define bitrep(i, n) for (int i = 0, i##_len = (1 << (int)(n)); i < i##_len; i++)\n#define bitrrep(i, n) for (int i = (1 << (int)(n)) - 1ll; i >= 0; i--)\nconstexpr int inf = 2000'000'000;\nconstexpr ll linf = 4000000000000000000ll;\nconstexpr ll M7 = 1000000007ll;\nconstexpr ll M09 = 1000000009ll;\nconstexpr ll M9 = 998244353ll;\n#define all(v) begin(v), end(v)\n#define rall(v) rbegin(v), rend(v)\nusing namespace std;\ntemplate <typename T>\ninline ostream& operator<<(ostream& os, vector<T>& v) {\n    for (auto& e : v) os << e << \" \";\n    return os;\n}\ntemplate <typename T, typename U>\nstd::ostream& operator<<(std::ostream& os, const std::pair<T, U>& p) noexcept {\n    return os << \"(\" << p.first << \", \" << p.second << \")\";\n}\n\nll Q;\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n    cin >> Q;\n    rep(_i, Q) {\n        ll n;\n        cin >> n;\n    }\n    return 0;\n}",
+		"description": "template:Codeforcesのテンプレ"
+	},
+	"procon": {
+		"prefix": "procon",
+		"body": "#include <bits/stdc++.h>\nusing ll = long long;\n#define rep(i, n) for (int i = 0, i##_len = (n); i < i##_len; ++i)\n#define reps(i, n) for (int i = 1, i##_len = (n); i <= i##_len; ++i)\n#define rrep(i, n) for (int i = ((int)(n)-1); i >= 0; --i)\n#define rreps(i, n) for (int i = ((int)(n)); i > 0; --i)\n#define rep2(i, s, n) for (int i = (s); i < (int)(n); i++)\n#define repc2(i, s, n) for (int i = (s); i <= (int)(n); i++)\nconstexpr int inf = 2000'000'000;\nconstexpr ll linf = 4000000000000000000ll;\nconstexpr ll M7 = 1000000007ll;\nconstexpr ll M09 = 1000000009ll;\nconstexpr ll M9 = 998244353ll;\n#define all(v) begin(v), end(v)\n#define rall(v) rbegin(v), rend(v)\nusing namespace std;\ntemplate <typename T>\ninline ostream& operator<<(ostream& os, const vector<T>& v) {\n    for (auto itr = v.begin(); itr != v.end(); ++itr) {\n        os << *itr;\n        if (itr != v.end() - 1) {\n            os << \" \";\n        }\n    }\n    return os;\n}\ntemplate <typename T, typename U>\nstd::ostream& operator<<(std::ostream& os, const std::pair<T, U>& p) noexcept {\n    return os << \"(\" << p.first << \", \" << p.second << \")\";\n}\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n    return 0;\n}",
+		"description": "template:"
+	},
+	"fastio": {
+		"prefix": "fastio",
+		"body": "ios_base::sync_with_stdio(false);\r\ncin.tie(NULL);",
+		"description": "sc:cinを高速に"
+	},
+	"bfs": {
+		"prefix": "bfs",
+		"body": "    auto bfs = [&](int ip) {\n        queue<int> que;\n        vector<ll> d(G.size(), linf);\n        d.at(ip) = 0;\n        que.push(ip);\n        while (!que.empty()) {\n            int u = que.front();\n            que.pop();\n            for (const auto &eg : G.at(u)) {\n                if (d.at(eg.to) > d.at(u) + 1) {\n                    d.at(eg.to) = d.at(u) + 1;\n                    que.push(eg.to);\n                }\n            }\n        }\n        return d;\n    };",
+		"description": "ad:graph:"
+	},
+	"dfs": {
+		"prefix": "dfs",
+		"body": "auto dfs = [&](auto dfs, int u) -> $1 {\n        seen.at(u) = true;\n        for (const auto &e : G.at(u)) {\n            if (seen.at(e.to))\n                continue;\n            dfs(dfs, e.to);\n        }\n    };",
+		"description": "ad:graph:"
+	},
+	"dijkstra": {
+		"prefix": "dijkstra",
+		"body": "    auto dijkstra = [&](int ip) {\n        using P = pair<ll, int>;\n        priority_queue<P, vector<P>, greater<P>> pq;\n        vector<ll> dist(G.size(), linf);\n        dist.at(ip) = 0;\n        pq.emplace(0ll, ip);\n        while (!pq.empty()) {\n            auto u = pq.top();\n            auto [curDist, curPos] = u;\n            pq.pop();\n            if (curDist > dist.at(curPos))\n                continue;\n            for (const auto &eg : G.at(curPos)) {\n                if (dist.at(eg.to) > dist.at(curPos) + eg.cost) {\n                    dist.at(eg.to) = dist.at(curPos) + eg.cost;\n                    pq.emplace(dist.at(eg.to), eg.to);\n                }\n            }\n        }\n        return dist;\n    };",
+		"description": "ad:graph:"
+	},
+	"compress": {
+		"prefix": "compress",
+		"body": "template <typename T>\nstruct compress {\n   private:\n    vector<T> xs;\n    vector<int> dst;\n    int n;\n\n   public:\n    compress(vector<T> x) : n(x.size()), dst(x.size()) {\n        rep(i, n) { xs.push_back(x[i]); }\n        sort(all(xs));\n        xs.erase(unique(all(xs)), xs.end());\n        rep(i, n) { dst[i] = distance(xs.begin(), lower_bound(all(xs), x[i])); }\n    }\n\n    T get(int i) { return dst[i]; }\n    T to_comp(T raw_x) { return distance(xs.begin(), lower_bound(all(xs), raw_x)); }\n    T to_raw(int compressed_x) { return xs[compressed_x]; }\n}",
+		"description": "ad:others:座圧"
+	},
+	"pqrev": {
+		"prefix": "pqrev",
+		"body": "priority_queue<P, vector<P>, greater<P>> ",
+		"description": "sc:逆順のpriority_queue"
+	},
+	"divisor": {
+		"prefix": "divisor",
+		"body": "vector<ll> divisor(ll n) {\n    vector<ll> res;\n    for (ll i = 1; i * i <= n; i++) {\n        if (n % i == 0) {\n            res.push_back(i);\n            if (n / i != i)\n                res.push_back(n / i);\n        }\n    }\n    sort(res.begin(), res.end());\n    return res;\n}",
+		"description": "ad:math:"
+	},
+	"bfs01": {
+		"prefix": "bfs01",
+		"body": "    auto bfs01 = [&](int ip) {\n        using P = pair<int, int>;\n        vector<int> d(G.size(), inf);\n        deque<int> dq;\n        d.at(ip) = 0;\n        dq.push_front(ip);\n        while (!dq.empty()) {\n            auto u = dq.front();\n            dq.pop_front();\n            for (const auto &eg : G.at(u)) {\n                if (d.at(eg.to) > d.at(u) + eg.cost) {\n                    d.at(eg.to) = d.at(u) + eg.cost;\n                    if (eg.cost == 1)\n                        dq.push_back(eg.to);\n                    else\n                        dq.push_front(eg.to);\n                }\n            }\n        }\n        return d;\n    };",
+		"description": "ad:graph:"
+	},
+	"loop4dir": {
+		"prefix": "loop4dir",
+		"body": "            rep(i, 4) {\n                int ny = y + dy[i], nx = x + dx[i];\n                if (ny < 0 || ny >= h || nx < 0 || nx >= w)\n                    continue;\n            }",
+		"description": "sc:"
+	},
+	"rerooting": {
+		"prefix": "rerooting",
+		"body": "template <typename T, typename EDGE, T (*merge)(T, T), T (*add)(T), T (*e)()>\nclass ReRooting {\n   private:\n    int n;\n    std::vector<vector<EDGE>> G;\n    std::vector<vector<T>> dp, dp_left, dp_right;  // G[i][j]より先の部分木の値\n    std::vector<int> parent, cid, pid;  // 頂点0を親とする根付き木における頂点vの親，親から見て何番目の子か\n    std::vector<int> preOrd;            // 帰りがけ順\n    std::vector<T> res;\n\n   public:\n    T dfs(int u) {\n        T r = e();\n        preOrd.push_back(u);\n        for (int i = 0; i < G.at(u).size(); i++) {\n            const auto &eg = G.at(u).at(i);\n            if (eg.to != parent.at(u)) {\n                cid.at(eg.to) = i;\n                parent.at(eg.to) = u;\n                r = merge(r, dfs(eg.to));\n            } else {\n                pid.at(u) = i;\n            }\n        }\n        r = add(r);\n        if (parent.at(u) != -1) {\n            dp.at(parent.at(u)).at(cid.at(u)) = r;\n        }\n        return r;\n    }\n\n    ReRooting(const std::vector<std::vector<EDGE>> &G) : G(G), n(int(G.size())) {\n        dp.resize(n);\n        dp_left.resize(n);\n        dp_right.resize(n);\n        for (int i = 0; i < n; i++) {\n            dp.at(i).resize(G.at(i).size());\n            dp_left.at(i).resize(G.at(i).size());\n            dp_right.at(i).resize(G.at(i).size());\n        }\n        parent.resize(n, -1);\n        cid.resize(n);\n        pid.resize(n);\n        res.resize(n);\n\n        dfs(0);\n\n        for (int i = 0; i < n; i++) {\n            int u = preOrd.at(i);\n            if (parent.at(u) != -1) {\n                dp.at(u).at(pid.at(u)) = e();\n                if (cid.at(u) - 1 != -1)\n                    dp.at(u).at(pid.at(u)) = merge(dp.at(u).at(pid.at(u)), dp_left.at(parent.at(u)).at(cid.at(u) - 1));\n                if (cid.at(u) + 1 != G.at(parent.at(u)).size())\n                    dp.at(u).at(pid.at(u)) = merge(dp.at(u).at(pid.at(u)), dp_right.at(parent.at(u)).at(cid.at(u) + 1));\n                dp.at(u).at(pid.at(u)) = add(dp.at(u).at(pid.at(u)));\n            }\n            dp_left.at(u).at(0) = dp.at(u).at(0);\n            for (int j = 1; j < G.at(u).size(); j++) {\n                dp_left.at(u).at(j) = merge(dp.at(u).at(j), dp_left.at(u).at(j - 1));\n            }\n            dp_right.at(u).at(G.at(u).size() - 1) = dp.at(u).at(G.at(u).size() - 1);\n            for (int j = G.at(u).size() - 2; j >= 0; j--) {\n                dp_right.at(u).at(j) = merge(dp.at(u).at(j), dp_right.at(u).at(j + 1));\n            }\n            res.at(u) = add(dp_left.at(u).back());\n        }\n    }\n\n    T get(int u) { return res.at(u); }\n};",
+		"description": "ad:graph:"
+	},
+	"perm_cycle": {
+		"prefix": "perm_cycle",
+		"body": "auto perm_cycle = [&](const vector<int> &perm) {\n        vector<vector<int>> cycles;\n        const int n = perm.size();\n        vector<bool> seen(n);\n        rep(i, n) {\n            if (seen[i])\n                continue;\n            vector<int> cycle;\n            int u = i;\n            while (!seen[u]) {\n                seen[u] = true;\n                cycle.emplace_back(u);\n                u = perm[u];\n            }\n            cycles.emplace_back(cycle);\n        }\n        return cycles;\n    };",
+		"description": "ad:graph:順列を閉路に分解"
+	},
+	"S2": {
+		"prefix": "S2",
+		"body": "struct S2 {\n    ll x, y;\n    S2() : x(0ll), y(0ll){};\n    constexpr S2(ll _x, ll _y) : x(_x), y(_y) {}\n    constexpr S2 reduced() const {\n        ll g = gcd(x, y);\n        return {x / g, y / g};\n    }\n    constexpr S2 operator+() const { return *this; }\n    constexpr S2 operator-() const { return {-x, -y}; }\n    constexpr S2 operator+(const S2& rhs) const { return {x + rhs.x, y + rhs.y}; }\n    constexpr S2 operator-(const S2& rhs) const { return {x - rhs.x, y - rhs.y}; }\n    constexpr S2 operator*(ll s) const { return {x * s, y * s}; }\n    constexpr S2 operator/(ll s) const { return {x / s, y / s}; }\n    S2& operator+=(const S2& rhs) {\n        x += rhs.x, y += rhs.y;\n        return *this;\n    }\n    S2& operator-=(const S2& rhs) {\n        x -= rhs.x, y -= rhs.y;\n        return *this;\n    }\n    S2& operator*=(ll s) {\n        x *= s, y *= s;\n        return *this;\n    }\n    S2& operator/=(ll s) {\n        x /= s, y /= s;\n        return *this;\n    }\n};\ninline constexpr S2 operator*(ll s, const S2& v) {\n    return {s * v.x, s * v.y};\n}\ninline ostream& operator<<(ostream& os, S2& s) {\n    return os << \"(\" << s.x << \", \" << s.y << \")\";\n}\ninline istream& operator>>(istream& is, S2& s) {\n    return is >> s.x >> s.y;\n}",
+		"description": "cp:ll2つのペア"
+	},
+	"S3": {
+		"prefix": "S3",
+		"body": "struct S3 {\n    ll x, y, z;\n    S3() : x(0ll), y(0ll), z(0ll){};\n    constexpr S3(ll _x, ll _y, ll _z) : x(_x), y(_y), z(_z) {}\n    S3 reduced() const {\n        ll g = gcd(gcd(x, y), z);\n        return {x / g, y / g, z / g};\n    }\n    constexpr S3 operator+() const { return *this; }\n    constexpr S3 operator-() const { return {-x, -y, -z}; }\n    constexpr S3 operator+(const S3& rhs) const { return {x + rhs.x, y + rhs.y, z + rhs.z}; }\n    constexpr S3 operator-(const S3& rhs) const { return {x - rhs.x, y - rhs.y, z - rhs.z}; }\n    constexpr S3 operator*(ll s) const { return {x * s, y * s, z * s}; }\n    constexpr S3 operator/(ll s) const { return {x / s, y / s, z / s}; }\n    S3& operator+=(const S3& rhs) {\n        x += rhs.x, y += rhs.y, z += rhs.z;\n        return *this;\n    }\n    S3& operator-=(const S3& rhs) {\n        x -= rhs.x, y -= rhs.y, z -= rhs.z;\n        return *this;\n    }\n    S3& operator*=(ll s) {\n        x *= s, y *= s, z *= s;\n        return *this;\n    }\n    S3& operator/=(ll s) {\n        x /= s, y /= s, z /= s;\n        return *this;\n    }\n};\ninline constexpr S3 operator*(ll s, const S3& v) {\n    return {s * v.x, s * v.y, s * v.z};\n}\ninline ostream& operator<<(ostream& os, S3& s) {\n    return os << \"(\" << s.x << \", \" << s.y << \", \" << s.z << \")\";\n}\ninline istream& operator>>(istream& is, S3& s) {\n    return is >> s.x >> s.y >> s.z;\n}",
+		"description": "cp:ll3つのタプル"
+	},
+	"retrograde_analysis": {
+		"prefix": "retrograde_analysis",
+		"body": "auto retrograde_analysis = [](const auto &revG) {\n    const int n = revG.size();\n    vector<int> dp(n, -1), outDeg(n);\n    queue<int> que;\n    rep(i, n) {\n        for (const auto &e : revG.at(i)) {\n            outDeg.at(e.to)++;\n        }\n    }\n    rep(i, n) {\n        if (outDeg.at(i) == 0) {\n            dp.at(i) = 0;\n            que.push(i);\n        }\n    }\n    while (!que.empty()) {\n        int u = que.front();\n        que.pop();\n        for (const auto &e : revG.at(u)) {\n            int nv = e.to;\n            if (dp.at(nv) != -1)\n                continue;\n            outDeg.at(nv)--;\n            if (dp.at(u) == 0) {\n                dp.at(nv) = 1;\n                que.push(nv);\n            } else if (dp.at(u) == 1 && outDeg.at(nv) == 0) {\n                dp.at(nv) = 0;\n                que.push(nv);\n            }\n        }\n    }\n    return dp;\n};",
+		"description": "ad:graph:後退解析, 0->lose, 1->win, -1->draw"
+	},
+	"contain_cycle_directed": {
+		"prefix": "contain_cycle_directed",
+		"body": "    auto contain_cycle_directed = [](const auto& G) {\n        const int n = G.size();\n        vector<int> in(n);\n        queue<int> que;\n        rep(i, n) for (const auto& e : G[i]) in.at(e.to)++;\n        rrep(i, n) if (in[i] == 0) que.push(i);\n        vector<int> ts;\n        while (!que.empty()) {\n            auto u = que.front();\n            que.pop();\n            ts.push_back(u);\n            for (const auto& e : G[u]) {\n                in.at(e.to)--;\n                if (in.at(e.to) == 0)\n                    que.push(e.to);\n            }\n        }\n        return ts.size() != n;\n    };",
+		"description": "ad:graph:"
+	},
+	"func": {
+		"prefix": "func",
+		"body": "[&]($2) -> ${3:int} {$0};",
+		"description": "sc:"
+	},
+	"inversion": {
+		"prefix": "inversion",
+		"body": "auto inversion = [](const auto& v) {\n    const int n = v.size();\n    fenwick_tree<int> bit(n);\n    vector<int> idx(n);\n    iota(all(idx), 0);\n    sort(all(idx), [&](int i, int j) { return v[i] == v[j] ? i > j : v[i] > v[j]; });\n    long long ans = 0;\n    for (auto&& id : idx) {\n        ans += bit.sum(0, id);\n        bit.add(id, 1);\n    }\n    return ans;\n};",
+		"description": "ad:転倒数"
+	},
+	"oldatcd": {
+		"prefix": "oldatcd",
+		"body": "#include <bits/stdc++.h>\n\n#include <atcoder/all>\nusing ll = long long;\nusing lll = __int128_t;\n#define rep(i, n) for (int i = 0, i##_len = (n); i < i##_len; ++i)\n#define reps(i, n) for (int i = 1, i##_len = (n); i <= i##_len; ++i)\n#define rrep(i, n) for (int i = ((int)(n)-1); i >= 0; --i)\n#define rreps(i, n) for (int i = ((int)(n)); i > 0; --i)\n#define rep2(i, s, n) for (int i = (s); i < (int)(n); i++)\n#define repc2(i, s, n) for (int i = (s); i <= (int)(n); i++)\nconstexpr int inf = 2000'000'000;\nconstexpr ll linf = 4'000'000'000'000'000'000ll, M7 = 1'000'000'007ll, M9 = 998'244'353ll;\n#define all(v) begin(v), end(v)\n#define rall(v) rbegin(v), rend(v)\nusing namespace std;\nusing namespace atcoder;\n\ntemplate <typename T, typename U>\ninline ostream& operator<<(ostream& os, const pair<T, U>& p) noexcept {\n    return os << p.first << \" \" << p.second;\n}\n\ninline ostream& operator<<(ostream& os, const modint998244353& m) noexcept { return os << m.val(); }\ninline ostream& operator<<(ostream& os, const modint1000000007& m) noexcept { return os << m.val(); }\ninline ostream& operator<<(ostream& os, const modint& m) noexcept { return os << m.val(); }\n\ninline string YESNO(bool cond) { return cond ? \"YES\" : \"NO\"; }\ninline string yesno(bool cond) { return cond ? \"yes\" : \"no\"; }\ninline string YesNo(bool cond) { return cond ? \"Yes\" : \"No\"; }\ninline auto add1(const auto& vec) {\n    auto res = vec;\n    for (auto&& e : res) ++e;\n    return res;\n}\n#ifdef ONLINE_JUDGE\n#define debug(...)\n#else\n#define debug(...) cerr << \"<\" << #__VA_ARGS__ << \">: \", debug_out(__VA_ARGS__)\ntemplate <typename T>\nvoid debug_out(T t) {\n    cerr << t << endl;\n}\ntemplate <typename T, typename... Args>\nvoid debug_out(T t, Args... args) {\n    cerr << t << \", \";\n    debug_out(args...);\n}\n#endif\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n    return 0;\n}",
+		"description": "template:旧ジャッジ"
+	},
+	"bSearchF": {
+		"prefix": "bSearchF",
+		"body": "auto bsearchF = [&](bool check = true) {\n    double ok = $1, ng = $2;\n    if (check) assert(cmp(ok) && !cmp(ng));\n    rep(i, 100) {\n        double mid = (ng + ok) / 2;\n        if (cmp(mid)) ok = mid;\n        else ng = mid;\n    }\n    return ok;\n};",
+		"description": "ad:"
+	},
+	"iolll": {
+		"prefix": "iolll",
+		"body": "inline ostream& operator<<(ostream& os, lll val) noexcept {\n    string s;\n    bool neg = val < 0;\n    if (val < 0) {\n        val *= -1;\n    }\n    if (val == 0) {\n        s += '0';\n    } else {\n        while (val > 0) {\n            s += '0' + val % 10;\n            val /= 10;\n        }\n    }\n    reverse(all(s));\n    if (neg) s = \"-\" + s;\n    return os << s;\n}\ninline istream& operator>>(istream& is, lll& val) noexcept {\n    string s;\n    is >> s;\n    bool neg = false;\n    if (s[0] == '-') {\n        neg = true;\n        s = s.substr(1);\n    }\n    val = 0;\n    for (auto c : s) {\n        val *= 10;\n        val += c - '0';\n    }\n    if (neg) val *= -1;\n    return is;\n}",
+		"description": "sc:int128の"
+	},
+	"gridBfs": {
+		"prefix": "gridBfs",
+		"body": "auto grid_bfs = [&](const auto& v, int sy, int sx) {\n    const int h = v.size(), w = v.at(0).size();\n    const int dd[] = {0, 1, 0, -1, 0};\n    using P = pair<int, int>;\n    queue<P> que;\n    vector dist = vector(h, vector<int>(w, inf));\n    dist[sy][sx] = 0;\n    que.emplace(sy, sx);\n    while (!que.empty()) {\n        auto [y, x] = que.front();\n        que.pop();\n        rep(i, 4) {\n            int ny = y + dd[i], nx = x + dd[i + 1];\n            if (ny < 0 || ny >= h || nx < 0 || nx >= w)\n                continue;\n            if (v[ny][nx] == '#')\n                continue;\n            if (dist[ny][nx] > dist[y][x] + 1) {\n                dist[ny][nx] = dist[y][x] + 1;\n                que.emplace(ny, nx);\n            }\n        }\n    }\n    return dist;\n};",
+		"description": "ad:graph:"
+	},
+	"find_SG": {
+		"prefix": "find_SG",
+		"body": "auto find_SG = [](const auto& v) -> tuple<int, int, int, int> {\n    const int h = v.size(), w = v.at(0).size();\n    int sy = -1, sx = -1, gy = -1, gx = -1;\n    rep(i, h) rep(j, w) {\n        if (v[i][j] == 'S' || v[i][j] == 's') {\n            sy = i;\n            sx = j;\n        } else if (v[i][j] == 'G' || v[i][j] == 'g') {\n            gy = i;\n            gx = j;\n        }\n    }\n    assert(sy != -1 && sx != -1 && gy != -1 && gx != -1);\n    return {sy, sx, gy, gx};\n};",
+		"description": "sc:グリッドのスタート，ゴール地点を見つける"
+	},
+	"to_vint": {
+		"prefix": "to_vint",
+		"body": "vector<ll> to_vint(ll x, ll base = 10, bool string_ord = false) {\n    vector<ll> res;\n    while (x) {\n        res.push_back(x % base);\n        x /= base;\n    }\n    if (string_ord) reverse(all(res));\n    return res;\n}",
+		"description": "sc:"
+	},
+	"runLengthEndoding": {
+		"prefix": "runLengthEndoding",
+		"body": "auto RLE = [](const auto& v) {\n    assert(!v.empty());\n    using T = typename decay<decltype(v.front())>::type;\n    vector<pair<T, int>> res;\n    for (const auto& e : v) {\n        if (res.empty() || res.back().first != e) res.emplace_back(e, 1);\n        else res.back().second++;\n    }\n    return res;\n};",
+		"description": "ad:others:連長圧縮"
+	},
+	"binCount": {
+		"prefix": "binCount",
+		"body": "auto binCount = [&](const auto& v, int maxNum = -1) {\n    if (maxNum < 0) maxNum = *max_element(all(v));\n    vector<ll> cnt(maxNum + 1);\n    for (const auto& e : v) cnt.at(e)++;\n    return cnt;\n};",
+		"description": "ad:"
+	},
+	"myrandom": {
+		"prefix": "myrandom",
+		"body": "class Random {\n   public:\n    mt19937 mt;\n    mt19937_64 mt64;\n    Random() {\n        random_device rd;\n        mt = mt19937(rd());\n        mt64 = mt19937_64(rd());\n    }\n\n    int randRange(int l, int r) {\n        uniform_int_distribution<int> dist(l, r - 1);\n        return dist(mt);\n    }\n    ll randRangell(ll l, ll r) {\n        uniform_int_distribution<ll> dist(l, r - 1);\n        return dist(mt64);\n    }\n    pair<int, int> randPairDistinct(int l, int r) {\n        int x = l, y = l;\n        do {\n            x = randRange(l, r), y = randRange(l, r);\n        } while (x == y);\n        return {x, y};\n    }\n    pair<ll, ll> randPairDistinct(ll l, ll r) {\n        ll x = l, y = l;\n        do {\n            x = randRangell(l, r), y = randRangell(l, r);\n        } while (x == y);\n        return {x, y};\n    }\n    vector<int> randPerm(int n, int start = 0) {\n        vector<int> res(n);\n        iota(res.begin(), res.end(), start);\n        shuffle(res.begin(), res.end(), mt);\n        return res;\n    }\n    vector<int> randArray(int n, int l, int r) {\n        vector<int> res(n);\n        uniform_int_distribution<int> dist(l, r - 1);\n        for (int i = 0; i < n; i++) res[i] = dist(mt);\n        return res;\n    }\n    vector<ll> randArrayll(int n, ll l, ll r) {\n        vector<ll> res(n);\n        uniform_int_distribution<ll> dist(l, r - 1);\n        for (int i = 0; i < n; i++) res[i] = dist(mt64);\n        return res;\n    }\n    vector<int> randArrayDistinct(int n, int l, int r) {\n        assert(r - l >= n);\n        vector<int> res(n);\n        uniform_int_distribution<int> dist(l, r - 1);\n        set<int> st;\n        while (st.size() < n) st.insert(dist(mt));\n        copy(st.begin(), st.end(), res.begin());\n        shuffle(res.begin(), res.end(), mt);\n        return res;\n    }\n    vector<ll> randArrayDistinctll(int n, ll l, ll r) {\n        assert(r - l >= n);\n        vector<ll> res(n);\n        uniform_int_distribution<ll> dist(l, r - 1);\n        set<ll> st;\n        while (st.size() < n) st.insert(dist(mt64));\n        copy(st.begin(), st.end(), res.begin());\n        shuffle(res.begin(), res.end(), mt);\n        return res;\n    }\n    vector<pair<int, int>> randTree(int n) {\n        assert(n >= 2);\n        vector<int> prufer = randArray(n - 2, 0, n);\n        return prufer_sequence_to_tree(prufer);\n    }\n    vector<pair<int, int>> prufer_sequence_to_tree(const vector<int>& a) {\n        const int n = a.size() + 2;\n        vector<int> deg(n, 1);\n        for (int x : a) {\n            assert(0 <= x && x < n);\n            deg[x]++;\n        }\n        priority_queue<int, vector<int>, greater<int>> pq;\n        for (int i = 0; i < n; ++i)\n            if (deg[i] == 1) pq.push(i);\n        vector<pair<int, int>> res;\n        for (int v : a) {\n            int u = pq.top();\n            pq.pop();\n            res.emplace_back(min(v, u), max(v, u));\n            --deg[u], --deg[v];\n            if (deg[v] == 1) pq.push(v);\n        }\n        int x = pq.top();\n        pq.pop();\n        int y = pq.top();\n        res.emplace_back(min(x, y), max(x, y));\n        return res;\n    }\n    vector<pair<int, int>> randGraphConnectedUD(int n, int m) {\n        assert(m >= n - 1);\n        assert(ll(n) * (n - 1) / 2 >= m);\n        vector<pair<int, int>> res = randTree(n);\n        set<pair<int, int>> edgesSt;\n        for (auto e : res) edgesSt.insert(e);\n        if (n <= 1000) {\n            vector<pair<int, int>> edges;\n            for (int i = 0; i < n - 1; ++i)\n                for (int j = i + 1; j < n; ++j)\n                    if (!edgesSt.contains({i, j})) edges.emplace_back(i, j);\n            shuffle(edges.begin(), edges.end(), mt);\n            assert(edges.size() >= m - n + 1);\n            for (int i = 0; i < m - n + 1; ++i) res.emplace_back(edges[i]);\n        } else {\n            while (res.size() < m) {\n                auto [x, y] = randPairDistinct(0, n);\n                if (x > y) swap(x, y);\n                if (!edgesSt.contains({x, y})) {\n                    res.emplace_back(x, y);\n                    edgesSt.insert({x, y});\n                }\n            }\n        }\n        return res;\n    }\n    inline static string LOWER = \"abcdefghijklmnopqrstuvwxyz\";\n    inline static string UPPER = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";\n    inline static string DIGIT = \"0123456789\";\n    inline static string ALPHABET = LOWER + UPPER;\n    string randString(int n, string chars = LOWER) {\n        string res(n, ' ');\n        uniform_int_distribution<int> dist(0, chars.size() - 1);\n        for (auto&& c : res) c = chars[dist(mt)];\n        return res;\n    }\n};",
+		"description": "sc:"
+	},
+	"zeroPadding": {
+		"prefix": "zeroPadding",
+		"body": "auto zeroPadding = [&](auto x, int w) -> string {\n    stringstream ss;\n    ss << setw(w) << setfill('0') << x;\n    return ss.str();\n};",
+		"description": "sc:"
+	},
+	"tint": {
+		"prefix": "tint",
+		"body": "using T = tuple<int, int, int>;",
+		"description": "sc:"
+	},
+	"tll": {
+		"prefix": "tll",
+		"body": "using T = tuple<ll, ll, ll>;",
+		"description": "sc:"
+	},
+	"encodedecode": {
+		"prefix": "encodedecode",
+		"body": "    auto encode = [](int S, int len, int base) {\n        vector<int> v(len);\n        for (auto& e : v) e = S % base, S /= base;\n        return v;\n    };\n    auto decode = [](const vector<int>& v, int base) {\n        int S = 0;\n        for (const auto& e : v | views::reverse) S = S * base + e;\n        return S;\n    };",
+		"description": "sc:"
+	},
+	"atcdm": {
+		"prefix": "atcdm",
+		"body": "#ifdef ONLINE_JUDGE\n#include <bits/stdc++.h>\n\n#include <atcoder/all>\n#else\n#include <mylibs/all.h>\n#endif\n\nusing ll = long long;\nusing lll = __int128_t;\n#define rep(i, n) for (int i = 0, i##_len = (n); i < i##_len; ++i)\n#define reps(i, n) for (int i = 1, i##_len = (n); i <= i##_len; ++i)\n#define rrep(i, n) for (int i = ((int)(n)-1); i >= 0; --i)\n#define rreps(i, n) for (int i = ((int)(n)); i > 0; --i)\n#define rep2(i, s, n) for (int i = (s); i < (int)(n); i++)\n#define repc2(i, s, n) for (int i = (s); i <= (int)(n); i++)\n#define length(v) ((int)(v).size())\nconstexpr int inf = 2'000'000'000;\nconstexpr ll linf = 4'000'000'000'000'000'000, M7 = 1'000'000'007, M9 = 998'244'353;\n#define all(v) begin(v), end(v)\n#define rall(v) rbegin(v), rend(v)\nusing namespace std;\nusing namespace atcoder;\n\n// clang-format off\n#define Vec(type, ...) __make_vec<type>(__VA_ARGS__)\ntemplate <class T> vector<T> __make_vec(size_t a) {return vector<T>(a);}template <class T, class... Ts>\nauto __make_vec(size_t a, Ts... ts) {return vector<decltype(__make_vec<T>(ts...))>(a, __make_vec<T>(ts...));}\n#define VecI(init, type, ...) __make_vecI<type, init>(__VA_ARGS__)\ntemplate <class T, T init>vector<T> __make_vecI(size_t a) {return vector<T>(a, init);}\ntemplate <class T, T init, class... Ts>\nauto __make_vecI(size_t a, Ts... ts) {return vector<decltype(__make_vecI<T, init>(ts...))>(a, __make_vecI<T, init>(ts...));}\n\ntemplate <typename T, typename U>inline ostream& operator<<(ostream& os, const pair<T, U>& p) noexcept {return os << p.first << \" \" << p.second;}\ninline ostream& operator<<(ostream& os, const modint& m) noexcept { return os << m.val(); }\ntemplate <int M>inline ostream& operator<<(ostream& os, const static_modint<M>& m) noexcept { return os << m.val(); }\n\ntemplate <typename T> struct is_static_modint : std::false_type {}; template <int MOD> struct is_static_modint<static_modint<MOD>> : std::true_type {};\ntemplate <template <typename...> typename C, typename Number>concept MyContainer = std::is_same_v<C<Number>, std::vector<Number>> || std::is_same_v<C<Number>, std::deque<Number>> || std::is_same_v<C<Number>, std::set<Number>> || std::is_same_v<C<Number>, std::unordered_set<Number>> || std::is_same_v<C<Number>, std::unordered_multiset<Number>> || std::is_same_v<C<Number>, std::multiset<Number>>;\ntemplate <typename Number>concept MyNumber = std::is_same_v<Number, int> || std::is_same_v<Number, ll> || std::is_same_v<Number, char> || std::is_same_v<Number, modint> || is_static_modint<Number>::value;\ntemplate <template <typename...> typename C, typename Number>concept MyContainerNumber = MyContainer<C, Number> && MyNumber<Number>;\ntemplate <template <typename...> typename OutCon, template <typename...> typename InCon, typename Number>concept MyNestedContainerNumber = MyContainer<OutCon, InCon<Number>> && MyContainerNumber<InCon, Number>;\ntemplate <template <typename...> typename C, typename Number>requires MyContainerNumber<C, Number>std::ostream& operator<<(std::ostream& os, const C<Number>& t) {auto itr = t.begin();auto end = t.end();if (itr != end) {os << *itr++;for (; itr != end; ++itr) os << ' ' << *itr;}return os;}\ntemplate <template <typename...> typename OutCon, template <typename...> typename InCon, typename Number>requires MyNestedContainerNumber<OutCon, InCon, Number>std::ostream& operator<<(std::ostream& os, const OutCon<InCon<Number>>& t) {auto itr = t.begin();auto end = t.end();if (itr != end) {os << *itr++;for (; itr != end; ++itr) os << '\\n' << *itr;}return os;}\ntemplate <typename T, typename U>istream& operator>>(istream& is, pair<T, U>& p) {return is >> p.first >> p.second;}\ntemplate <typename T>istream& operator>>(istream& is, vector<T>& v) {for (auto& e : v) is >> e;return is;}\nvoid inp() {}\ntemplate <typename T, typename... Args>void inp(T& a, Args&... args) {cin >> a, inp(args...);}\ntemplate <typename T>void inp1(vector<T>& v, int offset = 1, int len = -1) {if (len == -1) len = int(v.size()) - offset;assert(offset >= 0 && len >= 0);for (int i = offset; i < offset + len; ++i) cin >> v[i];}\ntemplate <typename T>void oup(const T& a) {cout << a << \"\\n\";}\ntemplate <typename T, typename... Args>void oup(const T& a, const Args&... args) {cout << a << \" \", oup(args...);}\n\ninline string YESNO(bool cond) { return cond ? \"YES\" : \"NO\"; }inline string yesno(bool cond) { return cond ? \"yes\" : \"no\"; }inline string YesNo(bool cond) { return cond ? \"Yes\" : \"No\"; }\ninline auto add1(auto vec, ll offset = 1) {for (auto& e : vec) e += offset;return vec;}\n#ifdef ONLINE_JUDGE\n#define debug(...)\n#else\n#define debug(...) cerr << \"<\" << #__VA_ARGS__ << \">: \", debug_out(__VA_ARGS__)\ntemplate <typename T>void debug_out(T t) {cerr << t << \"\\n\";}\ntemplate <typename T, typename... Args>void debug_out(T t, Args... args) {cerr << t << \", \";debug_out(args...);}\n#endif\n// clang-format on\n\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);$0\n    return 0;\n}",
+		"description": "template:AtCoderのテンプレ"
+	},
+	"myrange": {
+		"prefix": "myrange",
+		"body": "struct MyRange {\n    ll l, r;\n    MyRange(ll l, ll r) : l(l), r(r) {\n        if (l > r) l = r = 0ll;\n    }\n    MyRange() : MyRange(0ll, 0ll) {}\n    MyRange operator&(MyRange b) const {\n        ll nl = max(l, b.l), nr = min(r, b.r);\n        if (nl < nr) return MyRange(nl, nr);\n        else return MyRange();\n    }\n    MyRange operator|(MyRange b) const {  // 1つの区間になる時のみ繋げる\n        if (max(l, b.l) > min(r, b.r)) return MyRange();\n        return MyRange(min(l, b.l), max(r, b.r));\n    }\n    bool empty() const { return l == r; }\n    bool contain(ll x) const { return l <= x && x < r; }\n    ll count() const { return r - l; }\n};",
+		"description": "ad:区間クラス"
+	}
+}
